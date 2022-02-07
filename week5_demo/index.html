@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W5D1 - forms & table demo</title>
+</head>
+<body>
+    <h1>Basic form demo</h1>
+
+    <h2>form w/o table</h2>
+
+    <form>
+        <lable>First name: </lable>
+        <input type="text" name="firstName" id="firstName">
+        <br>
+        <lable>Last Name: </lable>
+        <input type="text" name="lastName" id="lastName">
+        <br>
+        <lable>Email: </lable>
+        <input type="text" name="email" id="email" required>
+        <br>
+        <input type="submit" value="SUBMIT!">
+
+        <H2>form with table</H2>
+    </form>
+
+    <form>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="firstName">First Name:</label>
+
+                    </td>
+                    <td>
+                        <input type="text" id="firstName" name="firstName" maxlength="50">
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="lastName">Last Name:</label>
+
+                    </td>
+                    <td>
+                        <input type="text" id="lastName" name="lastName" maxlength="50">
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="email">Email:</label>
+
+                    </td>
+                    <td>
+                        <input type="text" id="email" name="email" maxlength="50">
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="comments">Comments: </label>
+                    </td>
+
+                    <td>
+                        <textarea name="comments" rows="10" cols="22" placeholder="your comments here"></textarea>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="faveColor">Pick Your Fave Color:</label>
+
+                    </td>
+              
+                    <td>
+
+                        <select name="faveColor">
+                            <option value="red">red</option>
+                            <option value="yello">yello</option>
+                            <option value="green">green</option>
+                            <option value="blue">blue</option>
+                            <option value="black">black</option>
+                            <option value="cyan">cyan</option>
+                            <option value="orange">orange</option>
+                        </select>
+                    </td>
+                    
+                </tr>
+
+                <tr>
+                    <td>
+                        <lable for="study">program of study:</lable>
+                    </td>
+                    <td>
+                        <input type="radio" name="study" value="WD">web Dev
+                    </td>
+                </tr>
+
+            </tbody>
+
+
+        </table>
+    </form>
+</body>
+</html>
