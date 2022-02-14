@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Isaiah Diiorio">
+    <meta name="description" content="JavaScript Pay Calculator">
+    <title>Week 6 | JavaScript Pay Calculator</title>
+</head>
+<body>
+    <script>
+        
+        var hourlyPay = Number(prompt("What is your Hourly Pay?"))
+        var hoursWorked = Number(prompt("How Manny Hours Do You Work In One Week?"))
+        var totalHoursWorked = hoursWorked * 2
+        var taxPer = 20 / 100
+        var grossPay = hourlyPay * totalHoursWorked
+        var taxedAmmount = grossPay * taxPer
+        var usrNetPay = grossPay - taxedAmmount
+
+        console.log(`Gross Pay: $${grossPay.toFixed(2)}`)
+        console.log(`Uncle Sam's Share: $${taxedAmmount.toFixed(2)}`)
+        console.log(`Net Pay: $${usrNetPay.toFixed(2)}`)
+
+        alert(`Gross Pay: $${grossPay.toFixed(2)}\nUncle Sam's Share: $${taxedAmmount.toFixed(2)}\nNet Pay: $${usrNetPay.toFixed(2)}`)
+    </script>
+</body>
+</html>
