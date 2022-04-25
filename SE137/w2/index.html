@@ -1,33 +1,34 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week - 1</title>
+    <title>Week - 2</title>
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
-<body>
+<body class="brc">
     <div><!--Headder-->
         <h1>Isaiah Diiorio</h1>
         <hr>
     </div><!--Headder End-->
     <div id="nav"><!--Navbar-->
-        <a href="#">Bio</a>
-        <a href="#">Eduacation</a>
-        <a href="#">Hobbies</a>
+        <a href="#" id="Bio">Bio</a>
+        <a href="#" id="Edu">Eduacation</a>
+        <a href="#" id="Hob">Hobbies</a>
     </div><!--Navbar End-->
     <hr>
     <div id="main"><!--Main-->
         <div id="bio">
-            <h2>My Bio</h2>
-            <a></a>
-            <p>isaiah bio</p>
+            <h2 class="st">My Bio</h2>
+            <img src="SE137/w1/images/ShipMapFloor1.jpg" alt="D&D spaceship map">
+            <p>Hello Class I'm Isaiah Diiorio, I'm from Charlestown, RI. I enjoy board games such as Monopoly, Risk, and other various board and card games p.s. I would love to learn D&D. Neit seemed like the best path towards success. As well as in Highschool I took 4 years of computer tech and my teacher Mr. landi learned software engineering here at Neit and he has been one of the most inspirational people in my life.</p>
             <hr>
         </div>
-        <div id="ed">
-            <h2>Schooling</h2>
+        <div id="ed" class="hide">
+            <h2 class="st">Schooling</h2>
             <ul>
                 <li>Chariho Middle School</li>
                 <li>Chariho High School</li>
@@ -35,24 +36,58 @@
             </ul>
             <hr>
         </div>
-        <div id="hobbies">
-            <h2>Hobbies</h2>
+        <div id="hobbies" class="hide">
+            <h2 class="st">Hobbies</h2>
             <ol>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>Video games</li>
+                <li>Monopoly</li>
+                <li>D&D</li>
             </ol>
-            <img>
+            <img src="SE137\w1\images\ShipMapFloor2.jpg" alt="D&D spaceship map">
             <hr>
         </div>
-        <div id="footer">
+        <div id="footer" class="it"> 
             ©2022 Isaiah Diiorio | W1 Assignment
         </div>
     </div><!--Main End-->
     <hr>
 
     <script>
-        
+        var bLink = document.querySelector(`#Bio`)
+        var eLink = document.querySelector(`#Edu`)
+        var hLink = document.querySelector(`#Hob`)
+
+        var bio = document.querySelector(`#bio`)
+        var ed = document.querySelector(`#ed`)
+        var hobbies = document.querySelector(`#hobbies`)
+
+        bLink.addEventListener(`click`, Bio)
+        function Bio(e)
+        {
+            e.preventDefault()
+            bio.classList.remove(`hide`)
+            ed.classList.add(`hide`)
+            hobbies.classList.add(`hide`)
+        }
+
+        eLink.addEventListener(`click`, Edu)
+        function Edu(e)
+        {
+            e.preventDefault()
+            bio.classList.add(`hide`)
+            ed.classList.remove(`hide`)
+            hobbies.classList.add(`hide`)
+        }
+
+        hLink.addEventListener(`click`, Hob)
+        function Hob(e)
+        {
+            e.preventDefault()
+            bio.classList.add(`hide`)
+            ed.classList.add(`hide`)
+            hobbies.classList.remove(`hide`)
+        }
+
     </script>
 
 </body>
