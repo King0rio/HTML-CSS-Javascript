@@ -6,8 +6,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week - 3</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
-<body>
-    
+<body class="brc">
+    <div><!--Headder-->
+        <h1>Isaiah Diiorio</h1>
+        <hr>
+    </div><!--Headder End-->
+    <div id="nav"><!--Navbar-->
+        <a href="#" id="Bio">Bio</a>
+        <a href="#" id="Edu">Eduacation</a>
+        <a href="#" id="Hob">Hobbies</a>
+    </div><!--Navbar End-->
+    <hr>
+    <div id="main" class="grid-container"><!--Main-->
+        <div id="bio" class="grid-item item1">
+            <h2 class="st">My Bio</h2>
+            <p>Hello Class I'm Isaiah Diiorio, I'm from Charlestown, RI. I enjoy board games such as Monopoly, Risk, and other various board and card games p.s. I would love to learn D&D. Neit seemed like the best path towards success. As well as in Highschool I took 4 years of computer tech and my teacher Mr. landi learned software engineering here at Neit and he has been one of the most inspirational people in my life.</p>
+        </div>
+        <div id="ed" class="grid-item item3">
+            <h2 class="st">Schooling</h2>
+            <ul>
+                <li>Chariho Middle School</li>
+                <li>Chariho High School</li>
+                <li><a href="https://www.neit.edu/?utm_source=google&utm_medium=organic&utm_campaign=gmb-main" target="_blank">New England Institute Of Technology</a></li>
+            </ul>
+            
+        </div>
+        <div id="hobbies" class="grid-item item2">
+            <div>
+                <h2 class="st">Hobbies</h2>
+                <ol>
+                    <li>Video games</li>
+                    <li>Monopoly</li>
+                    <li>D&D</li>
+                </ol>
+            </div>
+            
+            <p style="background-image: url('https://timemachinehobby.com/wp-content/uploads/2021/03/915NTWZUtjL._AC_SL1500_.jpg');" alt="Monopoly">
+
+
+        </div>
+    </div><!--Main End-->
+
+    <div id="footer" class="it"> 
+        ©2022 Isaiah Diiorio | W3 Assignment
+    </div>
+    <hr>
+
+    <script>
+        var bLink = document.querySelector(`#Bio`)
+        var eLink = document.querySelector(`#Edu`)
+        var hLink = document.querySelector(`#Hob`)
+
+        var bio = document.querySelector(`#bio`)
+        var ed = document.querySelector(`#ed`)
+        var hobbies = document.querySelector(`#hobbies`)
+
+        bLink.addEventListener(`click`, Bio)
+        function Bio(e)
+        {
+            e.preventDefault()
+            bio.classList.remove(`hide`)
+            ed.classList.add(`hide`)
+            hobbies.classList.add(`hide`)
+        }
+
+        eLink.addEventListener(`click`, Edu)
+        function Edu(e)
+        {
+            e.preventDefault()
+            bio.classList.add(`hide`)
+            ed.classList.remove(`hide`)
+            hobbies.classList.add(`hide`)
+        }
+
+        hLink.addEventListener(`click`, Hob)
+        function Hob(e)
+        {
+            e.preventDefault()
+            bio.classList.add(`hide`)
+            ed.classList.add(`hide`)
+            hobbies.classList.remove(`hide`)
+        }
+
+    </script>
+
 </body>
 </html>
